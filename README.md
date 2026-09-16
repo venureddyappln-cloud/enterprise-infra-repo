@@ -7,7 +7,7 @@ Platform Test Framework
 An industry-grade Infrastructure-as-Code (IaC) repository layout utilizing a modular multi-environment workflow architecture.
 
 ## 🏗 Architecture Blueprint
-
+```
 ┌──────────────────────────┐
 │  GitHub Actions CI/CD   │
 └─────────────┬────────────┘
@@ -23,7 +23,7 @@ An industry-grade Infrastructure-as-Code (IaC) repository layout utilizing a mod
 │ • Private Subnet  │ │ • Private Subnet  │
 │ • Web Firewalls   │ │ • Web Firewalls   │
 └───────────────────┘ └───────────────────┘
-
+```
 ## 🛠 Project Structure & Design Patterns
 
 The codebase is split into enterprise tiers including `./modules/networking`, `./environments`, and automated governance workflows.
