@@ -1,32 +1,39 @@
 # enterprise-infra-repo
-enterprise-infra-repo/                   
-├── .github/workflows/
-│   └── iac-pipeline.yml                # 🤖 Automated Validation Engine (CI/CD Pipeline)
-├── modules/
-│   └── networking/
-│       ├── main.tf                     # 🧱 Core Networking Code Blueprint (VPC, Subnets, Firewalls)
-│       └── variables.tf                # 🎛️ Architecture Dynamic Inputs & Configuration Contracts
-└── environments/
-    ├── dev/
-    │   └── main.tf                     # 🧪 Development Environment Tenant (10.0.0.0/16 Network Space)
-    └── staging/
-        └── main.tf                     # 🚀 Staging Environment Tenant (10.10.0.0/16 Network Space)
-[ Developer Workspace ] ──( 1. Code Commit via Browser Editor )──> [ Remote GitHub Repository ]
-                                                                             │
-                                                                   ( 2. Webhook Event Trigger )
-                                                                             │
-                                                                             ▼
-                                                                [ GitHub Actions Cloud Runner ]
-                                                                             │
-                                              ┌──────────────────────────────┴──────────────────────────────┐
-                                              ▼                                                             ▼
-                                [ 3. Step: Syntax Validation ]                                [ 4. Step: Security Linting ]
-                                  - Code Formatting Check                                       - AquaSecurity tfsec Analysis
-                                  - Terraform Format Validation                                 - Checks for Misconfigurations
-                                              │                                                             │
-                                              └──────────────────────────────┬──────────────────────────────┘
-                                                                             │
-                                                                 ( 5. Complete Matrix Evaluation )
-                                                                             │
-                                                                             ▼
-                                                                [ Verified Green Checkmark ✅ ]
+
+# Enterprise GitOps Infrastructure Framework
+
+Platform Test Framework
+
+An industry-grade Infrastructure-as-Code (IaC) repository layout utilizing a modular multi-environment workflow architecture.
+
+## 🏗 Architecture Blueprint
+
+┌──────────────────────────┐
+│  GitHub Actions CI/CD   │
+└─────────────┬────────────┘
+              │
+    ┌─────────┴─────────┐
+    ▼                   ▼
+┌───────────────────┐ ┌───────────────────┐
+│   Development     │ │     Staging       │
+│   Environment     │ │   Environment     │
+├───────────────────┤ ├───────────────────┤
+│ • VPC Network     │ │ • VPC Network     │
+│ • Public Subnet   │ │ • Public Subnet   │
+│ • Private Subnet  │ │ • Private Subnet  │
+│ • Web Firewalls   │ │ • Web Firewalls   │
+└───────────────────┘ └───────────────────┘
+
+## 🛠 Project Structure & Design Patterns
+
+The codebase is split into enterprise tiers including `./modules/networking`, `./environments`, and automated governance workflows.
+
+## 🚀 Key Platform Features
+
+- **Decoupled Blueprint Abstraction**: Reusable global components configured cleanly.
+- **Automated Continuous Integration**: Integrated code validation to ensure cleanliness.
+- **Shift-Left Security Compliance**: Pre-configured static scanning configurations.
+
+*Maintained by VenuGopal Reddy*
+
+⚙ Platform Infrastructure & App Test Framework #1
