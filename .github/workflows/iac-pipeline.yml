@@ -10,9 +10,16 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.5.7
+
       - name: Terraform Format Check
         run: terraform fmt -check -recursive
+
+      - name: Run Security Linting (tfsec)
+        uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
