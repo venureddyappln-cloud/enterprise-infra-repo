@@ -12,7 +12,7 @@ An industry-grade Infrastructure-as-Code (IaC) repository layout utilizing a mod
 │  GitHub Actions CI/CD   │
 └─────────────┬────────────┘
               │
-    ┌─────────┴─────────┐
+    ┌_________┴_________┐
     ▼                   ▼
 ┌───────────────────┐ ┌───────────────────┐
 │   Development     │ │     Staging       │
@@ -37,3 +37,4 @@ The codebase is split into enterprise tiers including `./modules/networking`, `.
 *Maintained by VenuGopal Reddy*
 
 ⚙ Platform Infrastructure & App Test Framework #1
+
